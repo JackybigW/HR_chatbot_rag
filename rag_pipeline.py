@@ -1,11 +1,12 @@
-#Import everything 
 import os
 import openai
 from openai import OpenAI
+import streamlit as st
 
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
-api_key = os.environ['ZZZ_API_KEY']
+#api_key = os.environ['ZZZ_API_KEY']
+api_key = st.secrets["ZZZ_API_KEY"]
 
 client = OpenAI(
     base_url = 'https://api.zhizengzeng.com/v1',
